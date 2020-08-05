@@ -1,0 +1,105 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>前端小白</title>
+
+<style>
+/* Main styles */
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+    .text {
+      fill: none;
+      /*填充*/
+      stroke-width: 3;
+      /*轮廓宽度*/
+      stroke-linejoin: round;
+      /*不同类型的开放路径的终结*/
+      stroke-dasharray: 70 330;
+      /*创建虚线 一个表示长度 一个表示间距*/
+      stroke-dashoffset: 0;
+      /*文本或元素距离*/
+      
+      animation: stroke 6s infinite linear;
+    }
+    .text:nth-child(5n + 1) {
+      stroke: #F2385A;
+      /*轮廓颜色*/
+      animation-delay: -1.2s;
+      /*定义动画合适开始*/
+    }
+    .text:nth-child(5n + 2) {
+      stroke: #F5A503;
+     
+      animation-delay: -2.4s;
+    }
+    .text:nth-child(5n + 3) {
+      stroke: #E9F1DF;
+     
+      animation-delay: -3.6s;
+    }
+    .text:nth-child(5n + 4) {
+      stroke: #56D9CD;
+      
+      animation-delay: -4.8s;
+    }
+    .text:nth-child(5n + 5) {
+      stroke: #3AA1BF;
+     
+      animation-delay: -6s;
+    }
+
+
+    @keyframes stroke {
+      100% {
+        stroke-dashoffset: -400;
+      }
+    }
+    /* Other styles */
+    html, body {
+      height: 100%;
+      overflow:hidden;
+    }
+
+    body {
+      background: #111;
+      background-size: .2em 100%;
+      font: 5em/1 Open Sans, Impact;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    .divs{
+    	position: absolute;
+    	bottom: 10%;
+    	left: 50%;
+    	color:#fff;
+    	font-size: 20px;
+    	margin:0 auto;
+    }
+</style>
+</head>
+<body>
+
+  <svg viewBox="0 0 600 300">
+    <!-- Symbol-->
+    <symbol id="s-text">
+      <text text-anchor="middle" x="50%" y="50%" dy=".15em">主站维护~</text>
+    </symbol>
+    <!-- Duplicate symbols-->
+    <use class="text" xlink:href="#s-text"></use>
+    <use class="text" xlink:href="#s-text"></use>
+    <use class="text" xlink:href="#s-text"></use>
+    <use class="text" xlink:href="#s-text"></use>
+    <use class="text" xlink:href="#s-text"></use>
+    
+ 
+  </svg>
+  <div class="divs">鲁ICP备19009226号</div>
+</body>
+</html>
